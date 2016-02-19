@@ -1,6 +1,7 @@
 enfspatch
 =========
 Additional methods and patches for node fs module
+**enfs** stands for [E]asy [N]ode [fs]
 
 Description
 -----------
@@ -60,6 +61,7 @@ Additional Methods
 
 ### exists
   - **exists(path, callback)**
+
 > Change the natural behaviour of fs.exists to the node culture, it will return an error 
 in the first callback parameter.
 As exists is deprecated if it cease to exist then exists will use (#existStat) instead
@@ -76,6 +78,7 @@ check: [fs.exists](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback)
 
 ### existAccess
   - **existAccess(path, [mode], callback)**
+
 > Will use fs.access to check if the item exists in the file system and if the process
 as access to the item.
 
@@ -90,9 +93,11 @@ Sync:
 ```
 check: [fs.access](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
 
-### existStat and existLStat
+### existStat 
+### existLStat
 - **existStat(path,callback)**
 - **existLStat(path,callback)**
+
 > Will use fs.stat to check if the item exists in the file system.
 
 Sync: 
@@ -115,6 +120,7 @@ check: [fs.lstat](https://nodejs.org/api/fs.html#fs_fs_lstat_path_callback)
 
 ### existFStat
   - **existFStat(fd,callback)**
+
 > Will use fs.fstat to check if the item exists in the file system.
 
 Sync: 
