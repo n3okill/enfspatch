@@ -2,8 +2,9 @@ enfspatch
 =========
 Additional methods and patches for node fs module
 
-#Description
--This module will change some behaviors of fs module from node
+Description
+-----------
+This module will change some behaviors of fs module from node
 such as creating a queue for opening files when limit is reached,
 catching the error's and proceeding with the process when possible.
 - This module will add following methods to node fs module:
@@ -23,14 +24,15 @@ Usage
 `enfspatch` is a drop-in replacement for native `fs` module, you just need to include
 it instead of the native module.
 
-```js
-    var fs = require("fs"); //You don't need to do this anymore
-```
-
-instead you just need to do
-
+Use this
 ```js
     var enfs = require("esnofspatch");
+```
+
+instead of
+
+```js
+    var fs = require("fs"); //You don't need to do this anymore
 ```
 
 and all the methods from native fs module are available
@@ -57,12 +59,13 @@ Additional Methods
 
 
 ### exists
-* **exists(path, callback)**
+  - **exists(path, callback)**
 > Change the natural behaviour of fs.exists to the node culture, it will return an error 
 in the first callback parameter.
 As exists is deprecated if it cease to exist then exists will use (#existStat) instead
 
-Sync: * **existsSync(path)**
+Sync: 
+  - **existsSync(path)**
 
 ```js
     enfs.exists("/etc/passwd", function(err, itemExists){
@@ -72,11 +75,12 @@ Sync: * **existsSync(path)**
 check: [fs.exists](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback)
 
 ### existAccess
-* **existAccess(path, [mode], callback)**
+  - **existAccess(path, [mode], callback)**
 > Will use fs.access to check if the item exists in the file system and if the process
 as access to the item.
 
-Sync: * **existAccessSync(path, [mode])**
+Sync: 
+  - **existAccessSync(path, [mode])**
 
 
 ```js
@@ -86,14 +90,14 @@ Sync: * **existAccessSync(path, [mode])**
 ```
 check: [fs.access](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callback)
 
-### existStat
-### existLStat
-* **existStat(path,callback)**
-* **existLStat(path,callback)**
+### existStat and existLStat
+- **existStat(path,callback)**
+- **existLStat(path,callback)**
 > Will use fs.stat to check if the item exists in the file system.
 
-Sync: * **existStatSync(path)**
-      * **existLStatSync(path)**
+Sync: 
+  - **existStatSync(path)**
+  - **existLStatSync(path)**
 
 ```js
     enfs.existStat("/etc/passwd", function(err,itemExists){
@@ -110,10 +114,11 @@ check: [fs.stat](https://nodejs.org/api/fs.html#fs_fs_stat_path_callback)
 check: [fs.lstat](https://nodejs.org/api/fs.html#fs_fs_lstat_path_callback)
 
 ### existFStat
-* **existFStat(fd,callback)**
+  - **existFStat(fd,callback)**
 > Will use fs.fstat to check if the item exists in the file system.
 
-Sync: * **existFStatSync(path)**
+Sync: 
+  - **existFStatSync(path)**
 
 ```js
     enfs.existFStat("/etc/passwd", function(err,itemExists){
