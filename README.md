@@ -48,14 +48,14 @@ Additional Methods
 ------------------
 - [exists](#exists)
 - [existsSync](#exists)
-- [existAccess](#existAccess)
-- [existAccessSync](#existAccess)
-- [existStat](#existStat)
-- [existLStat](#existLStat)
-- [existFStat](#existFStat)
-- [existStatSync](#existStat)
-- [existLStatSync](#existLStat)
-- [existFStatSync](#existFStat)
+- [existAccess](#existaccess)
+- [existAccessSync](#existaccess)
+- [existStat](#existstat)
+- [existLStat](#existlstat)
+- [existFStat](#existfstat)
+- [existStatSync](#existstat)
+- [existLStatSync](#existlstat)
+- [existFStatSync](#existfstat)
 
 
 ### exists
