@@ -6,7 +6,7 @@ Additional methods and patches for node fs module
 -This module will change some behaviors of fs module from node
 such as creating a queue for opening files when limit is reached,
 catching the error's and proceeding with the process when possible.
--This module will add following methods to node fs module:
+- This module will add following methods to node fs module:
   * existStat
   * existLStat
   * existFStat
@@ -15,7 +15,7 @@ catching the error's and proceeding with the process when possible.
   * existFStatSync
   * existAccess
   * existAccessSync
--And will change the behaviour of:
+- And will change the behaviour of:
   * exists
   
 Usage
@@ -38,27 +38,27 @@ and all the methods from native fs module are available
 Errors
 ------
 All the methods follows the node culture.
--Async: Every async method returns an Error in the first callback parameter
--Sync: Every sync method throws an Error.
+- Async: Every async method returns an Error in the first callback parameter
+- Sync: Every sync method throws an Error.
 
 
 Additional Methods
 ------------------
--exists(#exists)
--existsSync(#exists)
--existAccess(#existAccess)
--existAccessSync(#existAccess)
--existStat(#existStat)
--existLStat(#existLStat)
--existFStat(#existFStat)
--existStatSync(#existStat)
--existLStatSync(#existLStat)
--existFStatSync(#existFStat)
+- exists(#exists)
+- existsSync(#exists)
+- existAccess(#existAccess)
+- existAccessSync(#existAccess)
+- existStat(#existStat)
+- existLStat(#existLStat)
+- existFStat(#existFStat)
+- existStatSync(#existStat)
+- existLStatSync(#existLStat)
+- existFStatSync(#existFStat)
 
 
 ### exists
 **exists(path, callback)**
-Change the natural behaviour of fs.exists to the node culture, it will return an error 
+> Change the natural behaviour of fs.exists to the node culture, it will return an error 
 in the first callback parameter.
 As exists is deprecated if it cease to exist then exists will use (#existStat) instead
 
@@ -73,7 +73,7 @@ check: [fs.exists](https://nodejs.org/api/fs.html#fs_fs_exists_path_callback)
 
 ### existAccess
 **existAccess(path, [mode], callback)**
-Will use fs.access to check if the item exists in the file system and if the process
+> Will use fs.access to check if the item exists in the file system and if the process
 as access to the item.
 
 Sync: **existAccessSync(path, [mode])**
@@ -90,7 +90,7 @@ check: [fs.access](https://nodejs.org/api/fs.html#fs_fs_access_path_mode_callbac
 ### existLStat
 **existStat(path,callback)**
 **existLStat(path,callback)**
-Will use fs.stat to check if the item exists in the file system.
+> Will use fs.stat to check if the item exists in the file system.
 
 Sync: **existStatSync(path)**
       **existLStatSync(path)**
@@ -111,7 +111,7 @@ check: [fs.lstat](https://nodejs.org/api/fs.html#fs_fs_lstat_path_callback)
 
 ### existFStat
 **existFStat(fd,callback)**
-Will use fs.fstat to check if the item exists in the file system.
+> Will use fs.fstat to check if the item exists in the file system.
 
 Sync: **existFStatSync(path)**
 
@@ -135,7 +135,7 @@ License
 
 Creative Commons Attribution 4.0 International License
 
-Copyright (c) 2016 Joao Parreira <joaofrparreira@gmail.com> (https://github.com/n3okill)
+Copyright (c) 2016 Joao Parreira <joaofrparreira@gmail.com> [GitHub](https://github.com/n3okill)
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. 
 To view a copy of this license, visit [CCA4](http://creativecommons.org/licenses/by/4.0/).
