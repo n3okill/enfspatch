@@ -44,16 +44,16 @@ All the methods follows the node culture.
 
 Additional Methods
 ------------------
-- exists(#exists)
-- existsSync(#exists)
-- existAccess(#existAccess)
-- existAccessSync(#existAccess)
-- existStat(#existStat)
-- existLStat(#existLStat)
-- existFStat(#existFStat)
-- existStatSync(#existStat)
-- existLStatSync(#existLStat)
-- existFStatSync(#existFStat)
+- [exists](#exists)
+- [existsSync](#exists)
+- [existAccess](#existAccess)
+- [existAccessSync](#existAccess)
+- [existStat](#existStat)
+- [existLStat](#existLStat)
+- [existFStat](#existFStat)
+- [existStatSync](#existStat)
+- [existLStatSync](#existLStat)
+- [existFStatSync](#existFStat)
 
 
 ### exists
