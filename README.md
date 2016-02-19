@@ -1,3 +1,10 @@
+[![Build Status](https://travis-ci.org/n3okill/enfspatch.svg)](https://travis-ci.org/n3okill/enfspatch)
+[![Build status](https://ci.appveyor.com/api/projects/status/524gen7vw7csbek8/branch/master?svg=true)](https://ci.appveyor.com/project/n3okill/enfspatch/branch/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/e75d4c3ee1da4ff5a4d48f7dadb308bb)](https://www.codacy.com/app/n3okill/enfspatch)
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=64PYTCDH5UNZ6)
+
+[![NPM](https://nodei.co/npm/enfspatch.png)](https://nodei.co/npm/enfspatch/)
+
 enfspatch
 =========
 Additional methods and patches for node fs module
@@ -152,4 +159,3 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 To view a copy of this license, visit [CCA4](http://creativecommons.org/licenses/by/4.0/).
 
 
-[1]: https://nodejs.org/api/fs.html
