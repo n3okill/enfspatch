@@ -4,4 +4,4 @@ node_js:
   - "node"
 os:
   - linux
-  - osx
+  # - osx
