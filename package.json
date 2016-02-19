@@ -15,6 +15,9 @@
   "bugs": {
     "url": "https://github.com/n3okill/enfspatch/issues"
   },
+  "engines": {
+    "node": ">=4.2.4"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -33,14 +36,48 @@
     "rimraf": "2.5.2"
   },
   "keywords": [
+    "appendFile",
+    "chown",
+    "fchown",
+    "lchown",
+    "chownSync",
+    "fchownSync",
+    "lchownSync",
+    "chmod",
+    "fchmod",
+    "lchmod",
+    "chmodSync",
+    "fchmodSync",
+    "lchmodSync",
+    "lutimes",
+    "lutimesSync",
+    "create",
+    "close",
+    "closeSync",
+    "directory",
+    "exists",
+    "existsSync",
+    "exisStat",
+    "existLStat",
+    "existFStat",
+    "existStatSync",
+    "existLStatSync",
+    "existFStatSync",
+    "existAccess",
+    "existAccessSync",
     "fs",
     "file",
     "file system",
-    "directory",
+    "open",
     "recursive",
     "read",
+    "readdir",
+    "readFile",
+    "ReadStream",
+    "readSync",
+    "rename",
     "write",
-    "create",
-    "open"
+    "WriteStream",
+    "writeFile"
   ]
 }

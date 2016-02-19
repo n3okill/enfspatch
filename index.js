@@ -9,6 +9,7 @@
  * @version 0.0.1
  */
 
+/*global module, require*/
 
 "use strict";
 
