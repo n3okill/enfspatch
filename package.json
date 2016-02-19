@@ -1,0 +1,46 @@
+{
+  "name": "enfspatch",
+  "version": "0.0.1",
+  "description": "Additional methods and patches for node fs module",
+  "license": "CC-BY-NC-4.0",
+  "author": {
+    "name": "João Parreira",
+    "email": "joaofrparreira@gmail.com"
+  },
+  "homepage": "https://github.com/n3okill/enfspatch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n3okill/enfspatch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/n3okill/enfspatch/issues"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "clone": "1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "2.1.0",
+    "eslint-plugin-mocha": "2.0.0",
+    "mocha": "2.4.5",
+    "should": "8.2.2",
+    "rimraf": "2.5.2"
+  },
+  "keywords": [
+    "fs",
+    "file",
+    "file system",
+    "directory",
+    "recursive",
+    "read",
+    "write",
+    "create",
+    "open"
+  ]
+}
