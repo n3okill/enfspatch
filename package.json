@@ -2,7 +2,7 @@
   "name": "enfspatch",
   "version": "0.0.2",
   "description": "Additional methods and patches for node fs module",
-  "license": "CC-BY-NC-4.0",
+  "license": "CC-BY-4.0",
   "author": {
     "name": "João Parreira",
     "email": "joaofrparreira@gmail.com"
