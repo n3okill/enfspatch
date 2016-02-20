@@ -4,3 +4,4 @@ node_modules/
 appveyor.yml
 Makefile
 .eslintrc
+.idea/
