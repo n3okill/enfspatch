@@ -1,6 +1,6 @@
 {
   "name": "enfspatch",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Additional methods and patches for node fs module",
   "license": "CC-BY-4.0",
   "author": {
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "make test",
-    "appveyor":"node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js"
+    "appveyor": "node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js"
   },
   "dependencies": {
     "clone": "1.0.2"
