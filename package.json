@@ -1,6 +1,6 @@
 {
   "name": "enfspatch",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Additional methods and patches for node fs module",
   "license": "CC-BY-4.0",
   "author": {
@@ -27,7 +27,8 @@
     "appveyor": "node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js"
   },
   "dependencies": {
-    "clone": "1.0.2"
+    "clone": "1.0.2",
+    "enfsaddins": ">=0.0.1"
   },
   "devDependencies": {
     "eslint": "2.1.0",
@@ -56,16 +57,6 @@
     "close",
     "closeSync",
     "directory",
-    "exists",
-    "existsSync",
-    "exisStat",
-    "existLStat",
-    "existFStat",
-    "existStatSync",
-    "existLStatSync",
-    "existFStatSync",
-    "existAccess",
-    "existAccessSync",
     "fs",
     "file",
     "file system",
