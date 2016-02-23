@@ -60,6 +60,6 @@ Creative Commons Attribution 4.0 International License
 Copyright (c) 2016 Joao Parreira <joaofrparreira@gmail.com> [GitHub](https://github.com/n3okill)
 
 This work is licensed under the Creative Commons Attribution 4.0 International License. 
-To view a copy of this license, visit [CCA4](http://creativecommons.org/licenses/by/4.0/).
+To view a copy of this license, visit [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/).
 
 
