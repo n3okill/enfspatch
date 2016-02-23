@@ -27,7 +27,7 @@ it instead of the native module.
 
 Use this
 ```js
-    var enfs = require("esnofspatch");
+    var enfs = require("enfspatch");
 ```
 
 instead of
