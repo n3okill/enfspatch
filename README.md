@@ -13,6 +13,7 @@ Additional methods and patches for node fs module
 
 This module is intended to work as a sub-module of [enfs](https://www.npmjs.com/package/enfs)
 
+
 Description
 -----------
 This module will change some behaviors of fs module from node

@@ -13,7 +13,7 @@
 
 "use strict";
 
-describe("enFsPatch-readdir", function() {
+describe("enfspatch > readdir", function() {
     var fs, readdir;
     before(function() {
         //need to clean all the cache before running this test

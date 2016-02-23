@@ -13,7 +13,7 @@
 
 "use strict";
 
-describe("enFsPatch-Stats", function() {
+describe("enfspatch > Stats", function() {
     it("enfs should use the same stats constructor as fs module", function(done) {
         var fs, enfs;
         fs = require("fs");

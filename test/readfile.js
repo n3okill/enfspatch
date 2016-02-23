@@ -19,7 +19,7 @@ var nodePath = require("path"),
     enFs = require("../"),
     cwd = process.cwd();
 
-describe("enFsPatch-readfile", function() {
+describe("enfspatch > readfile", function() {
     var tmpPath, num, paths;
     before(function() {
         tmpPath = nodePath.join(nodeOs.tmpdir(), "enfspatchreadfile");

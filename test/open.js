@@ -13,7 +13,7 @@
 
 "use strict";
 
-describe("enFsPatch-Open", function() {
+describe("enfspatch > Open", function() {
     var fs = require("../");
     it("should open an existing file sync", function() {
         var fd;

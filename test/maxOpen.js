@@ -12,7 +12,7 @@
 /* global describe, require, process, it, __filename */
 "use strict";
 
-describe("enFsPatch-max open", function() {
+describe("enfspatch > max open", function() {
     var fs = require("../");
     it("should test open a lot of stuff", function(done) {
         var n, opens, fds, going, closing, doneCalled, exitCalled;
