@@ -36,7 +36,7 @@ describe("enFsPatch-readfile", function() {
         it("should write files", function(done) {
             var filesNum;
             filesNum = (num - 1);
-            this.timeout(5000);
+            this.timeout(10000);
             for (var i = 0; i < num; i++) {
                 paths[i] = "file-" + i.toString();
                 enFs.writeFile(paths[i], "data", "utf8", function(errWrite) {
