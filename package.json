@@ -23,7 +23,6 @@
     "test": "test"
   },
   "scripts": {
-    "preversion": "make test",
     "test": "make test",
     "appveyor": "node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js"
   },
