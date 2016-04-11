@@ -28,13 +28,13 @@
   },
   "dependencies": {
     "clone": "1.0.2",
-    "enfsaddins": "0.0"
+    "enfsaddins": "0.1"
   },
   "devDependencies": {
-    "eslint": "2.2.0",
-    "eslint-plugin-mocha": "2.0.0",
+    "eslint": "2.7.0",
+    "eslint-plugin-mocha": "2.1.0",
     "mocha": "2.4.5",
-    "should": "8.2.2",
+    "should": "8.3.0",
     "rimraf": "2.5.2"
   },
   "keywords": [
