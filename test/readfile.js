@@ -13,14 +13,14 @@
 
 "use strict";
 
-var nodePath = require("path"),
-    nodeOs = require("os"),
-    rimraf = require("rimraf"),
-    enFs = require("../"),
-    cwd = process.cwd();
+const nodePath = require("path");
+const nodeOs = require("os");
+const rimraf = require("rimraf");
+const enFs = require("../");
+const cwd = process.cwd();
 
 describe("enfspatch > readfile", function() {
-    var tmpPath, num, paths;
+    let tmpPath, num, paths;
     before(function() {
         tmpPath = nodePath.join(nodeOs.tmpdir(), "enfspatchreadfile");
         num = 4097;
@@ -34,31 +34,37 @@ describe("enfspatch > readfile", function() {
     });
     describe("a lot of files", function() {
         it("should write files", function(done) {
-            var filesNum;
+            let filesNum;
             filesNum = (num - 1);
             this.timeout(10000);
-            for (var i = 0; i < num; i++) {
-                paths[i] = "file-" + i.toString();
-                enFs.writeFile(paths[i], "data", "utf8", function(errWrite) {
+            function writeFile(path) {
+                enFs.writeFile(path, "data", "utf8", function (errWrite) {
                     (errWrite === null).should.be.equal(true);
                     if (--filesNum === 0) {
                         return done();
                     }
                 });
             }
+            for (let i = 0; i < num; i++) {
+                paths[i] = "file-" + i.toString();
+                writeFile(paths[i]);
+            }
         });
         it("should read files", function(done) {
-            var filesNum;
+            let filesNum;
             filesNum = (num - 1);
             this.timeout(5000);
-            for (var i = 0; i < num; i++) {
-                enFs.readFile(paths[i], "utf8", function(err, contents) {
-                    (err === null).should.be.equal(true);
+            function readFile(path){
+                enFs.readFile(path,"utf8",function(err,contents){
+                    (err===null).should.be.equal(true);
                     contents.should.be.equal("data");
-                    if (--filesNum === 0) {
+                    if(--filesNum==0) {
                         return done();
                     }
                 });
+            }
+            for (let i = 0; i < num; i++) {
+                readFile(paths[i]);
             }
         });
         it("should clean the files", function(done) {

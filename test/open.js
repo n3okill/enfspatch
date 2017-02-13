@@ -13,10 +13,12 @@
 
 "use strict";
 
+const should = require("should");
+
 describe("enfspatch > Open", function() {
-    var fs = require("../");
+    const fs = require("../");
     it("should open an existing file sync", function() {
-        var fd;
+        let fd;
         (function() {
             fd = fs.openSync(__filename, "r");
         }).should.not.throw();
@@ -27,7 +29,8 @@ describe("enfspatch > Open", function() {
     it("should open an existing file async", function(done) {
         fs.open(__filename, "r", function(err, fd) {
             (err === null).should.be.equal(true);
-            (fd === undefined).should.be.equal(false);
+            should.exist(fd);
+            //(fd === undefined).should.be.equal(false);
             fs.close(fd, function(err) {
                 (err === null).should.be.equal(true);
                 done();
@@ -41,7 +44,8 @@ describe("enfspatch > Open", function() {
     });
     it("should fail to open non-existing file async", function(done) {
         fs.open("invalid file path async", "r", function(err, fd) {
-            (fd === undefined).should.be.equal(true);
+            should.not.exist(fd);
+            //(fd === undefined).should.be.equal(true);
             err.should.be.instanceOf(Error);
             err.code.should.be.equal("ENOENT");
             //err.message.should.containEql("no such file");

@@ -13,9 +13,9 @@
 "use strict";
 
 describe("enfspatch > max open", function() {
-    var fs = require("../");
+    const fs = require("../");
     it("should test open a lot of stuff", function(done) {
-        var n, opens, fds, going, closing, doneCalled, exitCalled;
+        let n, opens, fds, going, closing, doneCalled, exitCalled;
         // How many parallel open()'s to do
         n = 1024;
         opens = 0;
@@ -26,7 +26,7 @@ describe("enfspatch > max open", function() {
         exitCalled = false;
         // Get around EBADF from libuv by making sure that stderr is opened
         // Otherwise Darwin will refuse to give us a FD for stderr!
-        process.stderr.write('');
+        process.stderr.write("");
 
 
         function openFile() {
@@ -40,7 +40,7 @@ describe("enfspatch > max open", function() {
             });
         }
 
-        for (var i = 0; i < n; i++) {
+        for (let i = 0; i < n; i++) {
             openFile();
         }
 
@@ -69,7 +69,7 @@ describe("enfspatch > max open", function() {
                 stop();
             }, 100);
 
-            var closes = fds.slice(0);
+            let closes = fds.slice(0);
             fds.length = 0;
             closes.forEach(function(fd) {
                 fs.close(fd, function(err) {

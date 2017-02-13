@@ -14,13 +14,16 @@
 "use strict";
 
 describe("enfspatch > readdir", function() {
-    var fs, readdir;
-    before(function() {
-        //need to clean all the cache before running this test
+    let fs, readdir;
+    function deleteRequireCache(){
         delete require.cache[require.resolve("fs")];
         delete require.cache[require.resolve("../lib/enfsPatch")];
         delete require.cache[require.resolve("../lib/fs")];
         delete require.cache[require.resolve("../index")];
+    }
+    before(function() {
+        //need to clean all the cache before running this test
+        deleteRequireCache();
 
         fs = require("fs");
         readdir = fs.readdir;
@@ -31,16 +34,12 @@ describe("enfspatch > readdir", function() {
         };
     });
     after(function() {
-        //need to clean all the cache before running this test
-        delete require.cache[require.resolve("fs")];
-        delete require.cache[require.resolve("../lib/enfsPatch")];
-        delete require.cache[require.resolve("../lib/fs")];
-        delete require.cache[require.resolve("../index")];
+        //need to clean all the cache after running this test
+        deleteRequireCache();
         fs.readdir = readdir;
     });
     it("should test readdir reorder", function(done) {
-        var enfs;
-        enfs = require("../");
+        let enfs = require("../");
         enfs.readdir("anything", function(err, files) {
             (err === null).should.be.equal(true);
             files.should.be.eql(["b", "c", "x"]);
