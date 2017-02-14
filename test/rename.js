@@ -328,19 +328,16 @@ describe("enfsPatch > rename", function () {
                 renamed.should.be.equal(paths.length-locked);
             });
             it("should rename locked files after unlock", function () {
-                let locked = locks.length;
-                let renamed = 0;
-                let tmpLocks = [];
-                for (let i = 0; i < locked; i++) {
-                    tmpLocks[i] = locks[i];
-                }
+                let locked = locks.length, renamed = 0, tmpLocks =  Array.from(new Set(locks));
                 for(let i=0;i<tmpLocks.length;i++) {
                     try {
                         enFs.renameSync(tmpLocks[i],tmpLocks[i]+".renamed");
                     }catch(err) {
                         err.code.should.be.equal("EPERM");
-                        locks.shift();
                     }
+                }
+                while(locks.length) {
+                    locks.shift();
                 }
                 for(let i=0;i<tmpLocks.length;i++) {
                     enFs.renameSync(tmpLocks[i], tmpLocks[i] + ".renamed");
