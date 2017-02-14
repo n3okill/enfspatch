@@ -36,7 +36,7 @@ describe("enfspatch > readfile", function() {
         it("should write files", function(done) {
             let filesNum;
             filesNum = (num - 1);
-            this.timeout(10000);
+            this.timeout(20000);
             function writeFile(path) {
                 enFs.writeFile(path, "data", "utf8", function (errWrite) {
                     (errWrite === null).should.be.equal(true);
@@ -53,7 +53,7 @@ describe("enfspatch > readfile", function() {
         it("should read files", function(done) {
             let filesNum;
             filesNum = (num - 1);
-            this.timeout(5000);
+            this.timeout(10000);
             function readFile(path){
                 enFs.readFile(path,"utf8",function(err,contents){
                     (err===null).should.be.equal(true);
@@ -68,7 +68,7 @@ describe("enfspatch > readfile", function() {
             }
         });
         it("should clean the files", function(done) {
-            this.timeout(5000);
+            this.timeout(10000);
             rimraf(tmpPath + nodePath.sep + "*", function(err) {
                 (err === null).should.be.equal(true);
                 enFs.readdir(tmpPath, function(errRead, files) {
