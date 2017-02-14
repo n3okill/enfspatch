@@ -58,7 +58,7 @@ describe("enfspatch > readfile", function() {
                 enFs.readFile(path,"utf8",function(err,contents){
                     (err===null).should.be.equal(true);
                     contents.should.be.equal("data");
-                    if(--filesNum==0) {
+                    if(--filesNum===0) {
                         return done();
                     }
                 });
