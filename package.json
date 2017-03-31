@@ -1,6 +1,6 @@
 {
   "name": "enfspatch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Patches for node fs module",
   "license": "CC-BY-4.0",
   "author": {
