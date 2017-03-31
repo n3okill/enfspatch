@@ -11,36 +11,25 @@
 
 /* global describe, require, before, after, it, __filename */
 
-"use strict";
 
-describe("enfspatch > readdir", function() {
-    let fs, readdir;
-    function deleteRequireCache(){
-        delete require.cache[require.resolve("fs")];
-        delete require.cache[require.resolve("../lib/enfsPatch")];
-        delete require.cache[require.resolve("../lib/fs")];
-        delete require.cache[require.resolve("../index")];
-    }
-    before(function() {
-        //need to clean all the cache before running this test
-        deleteRequireCache();
+const fs = require("fs");
 
-        fs = require("fs");
-        readdir = fs.readdir;
-        fs.readdir = function(path, callback) {
-            process.nextTick(function() {
+describe("enfspatch > readdir", function () {
+    const readdir = fs.readdir;
+    let enfspatch = require("../");
+    before(function () {
+        fs.readdir = function readdir(path, callback) {
+            process.nextTick(function () {
                 callback(null, ["c", "x", "b"]);
             });
         };
+        enfspatch = enfspatch.mockEnfs(fs);
     });
-    after(function() {
-        //need to clean all the cache after running this test
-        deleteRequireCache();
+    after(function () {
         fs.readdir = readdir;
     });
     it("should test readdir reorder", function(done) {
-        let enfs = require("../");
-        enfs.readdir("anything", function(err, files) {
+        enfspatch.readdir("anything", function(err, files) {
             (err === null).should.be.equal(true);
             files.should.be.eql(["b", "c", "x"]);
             done();

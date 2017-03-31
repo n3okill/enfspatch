@@ -24,21 +24,18 @@
   },
   "scripts": {
     "test": "make test",
-    "appveyor": "node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js",
-    "nvm47332": "nvm use 4.7.3 32 & make test",
-    "nvm69532": "nvm use 6.9.5 32 & make test",
-    "multiple32": "npm run-script nvm47332 & npm run-script nvm69532"
+    "appveyor": "node ./node_modules/mocha/bin/mocha --reporter spec --require should test/*.js"
   },
   "dependencies": {
-    "clone": "2.1.0",
-    "enfsaddins": "0.1"
+    "clone": "^2.1.1",
+    "enfsaddins": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "3.15.0",
-    "eslint-plugin-mocha": "4.8.0",
-    "mocha": "3.2.0",
-    "rimraf": "2.5.4",
-    "should": "11.2.0"
+    "eslint": "^3.18.0",
+    "eslint-plugin-mocha": "^4.9.0",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.6.1",
+    "should": "^11.2.1"
   },
   "keywords": [
     "appendFile",

@@ -1,9 +1,10 @@
-0.1.1 / 2017-02-13
+1.0.0 / 2017-02-13
 ==================
   * dependencies update
   * rename async improvement
   * rename tests
   * general code improvements
+  * major version
   
 0.1.0 / 2016-04-11
 ==================
