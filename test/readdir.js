@@ -11,6 +11,7 @@
 
 /* global describe, require, before, after, it, __filename */
 
+"use strict";
 
 const fs = require("fs");
 
